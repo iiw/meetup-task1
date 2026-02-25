@@ -6,8 +6,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-    .setTitle('Meetup API')
-    .setDescription('The Meetup API description')
+    .setTitle('Task1 API')
+    .setDescription('The API description')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
@@ -15,4 +15,5 @@ async function bootstrap() {
 
   await app.listen(process.env.PORT ?? 3080);
 }
-bootstrap();
+
+void bootstrap();
